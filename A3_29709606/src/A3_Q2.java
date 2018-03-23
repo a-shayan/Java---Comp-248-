@@ -12,9 +12,11 @@ public class A3_Q2 {
 		
 		//Declare variables
 		int userInput = 0;
+		int numRows = 0;
 		boolean validInput = false;
 		char [][] squares;
 		int row=0, col=0;
+		String inputX, inputY;
 		
 		//Header and introduction to program
 		System.out.println("|-----****-----****-----****-----****-----****-----****-----|");
@@ -33,7 +35,7 @@ public class A3_Q2 {
 		System.out.println("\t 7 - Integer Filled Square");
 		System.out.println("\t 8 - Checkered (must be a multiple of 4)");
 		System.out.println("\t 9 - Quit");
-		System.out.println("Enter your choice (1 to 9)");
+		System.out.print("Enter your choice (1 to 9) ");
 		
 		//Validate user input, loop until user provides a valid input
 		do {
@@ -47,48 +49,86 @@ public class A3_Q2 {
 		
 		validInput = false;
 		
+		do {
+			System.out.print("How many rows and columns (min 4 & max 20)? ");
+			row = myKey.nextInt();
+			if (row >=4 && row <=20 ) {
+				validInput = true;
+				col = row;
+			}
+			
+		} while (validInput == false);
+		
+		validInput = false;
+		
 		System.out.println();
 		
 		//Switch statement to identify what program to execute
 		do {
 		switch (userInput) {
 		case 1:
-			
+
+			System.out.println("Which character do you want to fill your square with? ");
+			inputX = myKey.nextLine();
 			break;
 			
 		case 2:
-			
+
+			System.out.println("Which character do you want to fill your square with? ");
+			inputX = myKey.nextLine();
 			break;
 		
 		case 3:
-			
+
+			System.out.println("Which character do you want for the X? ");
+			inputX = myKey.nextLine();
+			System.out.println("Which character do you want around the X? ");
+			inputY = myKey.nextLine();
 			break;
 		
 		case 4:
-			
+
+			System.out.println("Which character do you want for the even rows? ");
+			inputX = myKey.nextLine();
+			System.out.println("Which character do you want for the odd rows? ");
+			inputY = myKey.nextLine();
 			break;
 		
 		case 5:
-			
+
+			System.out.println("Which character do you want for the even columns? ");
+			inputX = myKey.nextLine();
+			System.out.println("Which character do you want for the odd columns? ");
+			inputY = myKey.nextLine();
 			break;
 			
 		case 6:
-			
+
+			System.out.println("Which character do you want for the even diagonals? ");
+			inputX = myKey.nextLine();
+			System.out.println("Which character do you want for the odd diagonals? ");
+			inputY = myKey.nextLine();
 			break;
 			
 		case 7:
-			
+	
+			System.out.println("What is the starting number for your integer filled square (between 0 and 50 inclusive): ");
+			inputX = myKey.nextLine();
 			break;
 			
 		case 8:
-			
+
+			System.out.println("Which character do you want for the 1st checker? ");
+			inputX = myKey.nextLine();
+			System.out.println("Which character do you want for the 2nd checker? ");
+			inputY = myKey.nextLine();
 			break;
 			
 		case 9:
 			System.exit(0);
 		}
 		
-		if (row )
+		
 		
 		
 		} while (validInput == false);
